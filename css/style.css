@@ -76,7 +76,7 @@ html {
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--gray-700);
   background: var(--white);
   overflow-x: hidden;
@@ -119,19 +119,21 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   line-height: 1.15;
   color: var(--gray-900);
-  letter-spacing: -0.02em;
 }
 
 h1 {
   font-size: clamp(2.5rem, 5vw, 4.2rem);
+  letter-spacing: -0.02em;
 }
 
 h2 {
   font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.02em;
 }
 
 h3 {
   font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  letter-spacing: -0.01em;
 }
 
 p {
@@ -148,6 +150,11 @@ p {
 ::selection {
   background: var(--primary);
   color: var(--white);
+  padding: 2px 0;
+}
+
+h2.font-display {
+  letter-spacing: -0.01em;
 }
 
 /* --------------------------------------------------------------------------
@@ -182,6 +189,11 @@ p {
   letter-spacing: 0.08em;
   border-radius: 50px;
   margin-bottom: 20px;
+  transition: var(--transition);
+}
+
+.section__tag:hover {
+  background: rgba(26, 86, 219, 0.15);
 }
 
 .section__title {
@@ -192,7 +204,7 @@ p {
 .section__desc {
   font-size: 1.1rem;
   color: var(--gray-500);
-  max-width: 600px;
+  max-width: 640px;
   margin: 0 auto;
 }
 
@@ -349,10 +361,10 @@ p {
   max-width: var(--max-width);
   margin: 0 auto;
   height: 100%;
-  padding: 0 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
 }
 
 .header__logo {
@@ -367,7 +379,8 @@ p {
 }
 
 .header.scrolled .header__logo {
-  transform: scale(0.92);
+  transform: scale(0.88);
+  transition: transform 0.4s ease;
 }
 
 .header__nav-list {
@@ -378,13 +391,30 @@ p {
 
 .header__nav-link {
   color: var(--gray-300);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   position: relative;
-  padding: 4px 0;
+  padding: 4px 0 4px 14px;
   transition: var(--transition);
+}
+
+.header__nav-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  transition: transform 0.3s ease;
+}
+
+.header__nav-link--active::before {
+  transform: translateY(-50%) scale(1);
 }
 
 .header__nav-link::after {
@@ -675,6 +705,10 @@ p {
   font-size: 1.05rem;
   line-height: 1.8;
   margin-bottom: 20px;
+}
+
+.about__paragraph:last-child {
+  margin-bottom: 0;
 }
 
 .about__stats {
@@ -1773,6 +1807,12 @@ p {
   gap: 20px;
 }
 
+.contact__form .form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
 .form__group {
   display: flex;
   flex-direction: column;
@@ -1961,10 +2001,12 @@ p {
   color: var(--gray-500);
   font-size: 0.95rem;
   transition: var(--transition);
+  display: inline-block;
 }
 
 .footer__link:hover {
   color: var(--primary-light);
+  transform: translateX(4px);
 }
 
 .footer__contact-list {
@@ -2013,9 +2055,235 @@ p {
 }
 
 /* --------------------------------------------------------------------------
-   14. CLIENTS
+   14. FINANCIAL PARTNERS
    -------------------------------------------------------------------------- */
-.clients {
+.fin-partners {
+  background:
+    radial-gradient(ellipse 700px 400px at 50% 0%, rgba(59, 130, 246, 0.04), transparent),
+    var(--pattern-dots),
+    var(--surface);
+  position: relative;
+  overflow: hidden;
+}
+
+.fin-partners .container {
+  position: relative;
+  z-index: 1;
+}
+
+.fin-partners__carousel {
+  position: relative;
+  overflow: hidden;
+  margin: 0 -8px;
+  padding: 0 8px;
+}
+
+.fin-partners__track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.fin-partner-card {
+  flex: 0 0 calc(25% - 15px);
+  min-width: 200px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+  border: 1px solid var(--gray-100);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.fin-partner-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary-gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.fin-partner-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.fin-partner-card:hover::before {
+  transform: scaleX(1);
+}
+
+.fin-partner-card__logo {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  transition: var(--transition);
+}
+
+.fin-partner-card:hover .fin-partner-card__logo {
+  transform: scale(1.1);
+}
+
+.fin-partner-card__name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--gray-900);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.fin-partner-card__tag {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+.fin-partners__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 2px solid var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-700);
+  transition: var(--transition);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  z-index: 2;
+}
+
+.fin-partners__arrow:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.fin-partners__arrow--prev {
+  left: -8px;
+}
+
+.fin-partners__arrow--next {
+  right: -8px;
+}
+
+/* --------------------------------------------------------------------------
+   14b. TECH PARTNERS
+   -------------------------------------------------------------------------- */
+.tech-partners {
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-partners::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 600px 300px at 50% 0%, rgba(59, 130, 246, 0.03), transparent),
+    var(--pattern-grid);
+  pointer-events: none;
+}
+
+.tech-partners .container {
+  position: relative;
+  z-index: 1;
+}
+
+.tech-partners__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tech-partner-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px 28px;
+  text-align: center;
+  border: 1px solid var(--gray-100);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-partner-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary-gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.tech-partner-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.tech-partner-card:hover::before {
+  transform: scaleX(1);
+}
+
+.tech-partner-card__logo {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  transition: var(--transition);
+}
+
+.tech-partner-card:hover .tech-partner-card__logo {
+  transform: scale(1.1);
+}
+
+.tech-partner-card__name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--gray-900);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.tech-partner-card__tag {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   15. CLIENTS
+   -------------------------------------------------------------------------- */
   background: var(--white);
   position: relative;
   overflow: hidden;
@@ -2222,6 +2490,7 @@ p {
 ::-webkit-scrollbar-thumb {
   background: var(--gray-300);
   border-radius: 5px;
+  transition: background 0.2s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -2550,6 +2819,27 @@ p {
     gap: 16px;
   }
 
+  .fin-partner-card {
+    flex: 0 0 calc(33.333% - 14px);
+    min-width: 160px;
+    padding: 24px 16px;
+  }
+
+  .fin-partner-card__logo svg {
+    width: 44px;
+    height: 44px;
+  }
+
+  .tech-partners__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 100%;
+  }
+
+  .tech-partner-card {
+    padding: 28px 20px;
+  }
+
   .partner-card {
     padding: 24px 16px;
   }
@@ -2671,6 +2961,11 @@ p {
   }
 
   /* Contact */
+  .contact__form .form__row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
   .contact__form-wrapper {
     padding: 28px 20px;
   }
@@ -2678,7 +2973,7 @@ p {
   .form__input,
   .form__textarea {
     padding: 12px 14px;
-    font-size: 0.95rem;
+    font-size: 16px;
   }
 
   .contact__info-card {
@@ -2810,6 +3105,29 @@ p {
 
   /* Partners */
   .partners__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fin-partner-card {
+    flex: 0 0 calc(50% - 10px);
+    min-width: 140px;
+    padding: 20px 12px;
+  }
+
+  .fin-partner-card__logo svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .fin-partner-card__name {
+    font-size: 0.9rem;
+  }
+
+  .fin-partner-card__tag {
+    font-size: 0.65rem;
+  }
+
+  .tech-partners__grid {
     grid-template-columns: 1fr;
   }
 

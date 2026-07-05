@@ -14,7 +14,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>PronoiA — Consultoria Estratégica</title>
 </head>
@@ -44,7 +44,8 @@
               </linearGradient>
             </defs>
             <rect x="2" y="2" width="28" height="28" rx="8" fill="url(#logo-grad)"/>
-            <path d="M11 16h10M16 11v10" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M10 20c2-4 6-10 12-6s4 8 6 10" stroke="#fff" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <circle cx="25" cy="20" r="2.5" fill="#fff"/>
             <text x="38" y="22" font-family="Inter,sans-serif" font-weight="800" font-size="18" fill="currentColor" letter-spacing="-0.3">PronoiA</text>
           </svg>
         </a>
@@ -59,13 +60,11 @@
           <li><a href="#quem-somos" class="header__nav-link">Quem Somos</a></li>
           <li><a href="#solucoes" class="header__nav-link">Soluções</a></li>
           <li><a href="#metodologia" class="header__nav-link">Metodologia</a></li>
-          <li><a href="#parceiros" class="header__nav-link">Parceiros</a></li>
-          <li><a href="#clientes" class="header__nav-link">Clientes</a></li>
           <li><a href="#resultados" class="header__nav-link">Resultados</a></li>
           <li><a href="#contato" class="header__nav-link">Contato</a></li>
         </ul>
-        <a href="#contato" class="header__cta btn btn--primary">Fale Conosco</a>
       </nav>
+      <a href="#contato" class="header__cta btn btn--primary">Fale Conosco</a>
     </div>
   </header>
 
@@ -506,6 +505,146 @@
     </div>
   </section>
 
+  <!-- ========== PARCEIROS FINANCEIROS ========== -->
+  <section class="fin-partners section" id="parceiros">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Integrações</span>
+        <h2 class="section__title font-display">Parceiros Financeiros</h2>
+        <p class="section__desc">Integramos com as principais plataformas de pagamento e criptomoedas do mercado</p>
+        <div class="section__divider"></div>
+      </div>
+      <div class="fin-partners__carousel reveal">
+        <div class="fin-partners__track" id="finPartnersTrack">
+
+          <div class="fin-partner-card">
+            <div class="fin-partner-card__logo">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L3 7v6c0 5 3.5 8.5 9 9 5.5-.5 9-4 9-9V7l-9-5z" fill="#32BCAD"/>
+                <path d="M12 7v15c5.5-.5 9-4 9-9V7l-9-5v5z" fill="#00A8A8"/>
+                <text x="12" y="15" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="6" fill="#fff">PIX</text>
+              </svg>
+            </div>
+            <span class="fin-partner-card__name">PIX</span>
+            <span class="fin-partner-card__tag">Pagamento Instantâneo</span>
+          </div>
+
+          <div class="fin-partner-card">
+            <div class="fin-partner-card__logo">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="#EC7000" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93C7.05 19.44 4 16.08 4 12c0-.61.08-1.21.22-1.78L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-1.08-1.42-2.39-2.9-2.39h-2v-2h4c.55 0 1-.45 1-1V11c0-.55-.45-1-1-1h-1V8c0-.55-.45-1-1-1h-2V5h-2v2H9c-.55 0-1 .45-1 1v2H7c-.55 0-1 .45-1 1v2.07c1.16.41 2 1.51 2 2.93v1.93l4.07 4.07c3.06-.5 5.43-3.06 5.83-6.54z"/>
+              </svg>
+            </div>
+            <span class="fin-partner-card__name">Itaú</span>
+            <span class="fin-partner-card__tag">Banking</span>
+          </div>
+
+          <div class="fin-partner-card">
+            <div class="fin-partner-card__logo">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="#820AD1" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                <path d="M15 9.5c0-1.38-1.12-2.5-2.5-2.5H10v6h2.5c1.38 0 2.5-1.12 2.5-2.5V9.5zm-3.5 2.5h-1V9h1c.83 0 1.5.67 1.5 1.5v1c0 .83-.67 1.5-1.5 1.5z"/>
+              </svg>
+            </div>
+            <span class="fin-partner-card__name">Nubank</span>
+            <span class="fin-partner-card__tag">Fintech</span>
+          </div>
+
+          <div class="fin-partner-card">
+            <div class="fin-partner-card__logo">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="#21C25E" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M16 8.5c-.5-1.5-2-2-3.5-2-2 0-3.5 1-3.5 2.5 0 1.5 1.5 2 3.5 2.5 2 .5 3.5 1 3.5 2.5 0 1.5-1.5 2.5-3.5 2.5-1.5 0-3-.5-3.5-2" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                <path d="M12 5v14" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="fin-partner-card__name">PicPay</span>
+            <span class="fin-partner-card__tag">Carteira Digital</span>
+          </div>
+
+          <div class="fin-partner-card">
+            <div class="fin-partner-card__logo">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="#00B1EA" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M7 14c1 1.5 3 2 5 2s4-.5 4-2-2-1.5-4-2-4-.5-4-2 2-2 4-2 4 .5 5 2" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="fin-partner-card__name">Mercado Pago</span>
+            <span class="fin-partner-card__tag">Pagamentos</span>
+          </div>
+
+          <div class="fin-partner-card">
+            <div class="fin-partner-card__logo">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="#F7931A" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M15 10.5c.5-1.5-.5-2.5-2-2.5l.5-2h-1.5l-.5 2h-1l.5-2h-1.5l-.5 2h-2.5l-.5 1.5h2.5l-1 4h-2l-.5 1.5h2l-.5 2h1.5l.5-2h1l-.5 2h1.5l.5-2c2 0 3.5-1 4-2.5z" fill="#fff"/>
+              </svg>
+            </div>
+            <span class="fin-partner-card__name">Bitcoin</span>
+            <span class="fin-partner-card__tag">Criptomoeda</span>
+          </div>
+
+          <div class="fin-partner-card">
+            <div class="fin-partner-card__logo">
+              <svg width="56" height="56" viewBox="0 0 24 24" fill="#627EEA" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 4v5.5l4.5 2L12 4zm0 0L7.5 11.5 12 9.5V4zm0 12v4l4.5-6.5L12 16zm0 4v-4l-4.5-2.5L12 20zm0-5.5l4.5-2.5L12 9.5v5zm0 0L7.5 11 12 9.5v5z" fill="#fff" fill-opacity="0.9"/>
+              </svg>
+            </div>
+            <span class="fin-partner-card__name">Ethereum</span>
+            <span class="fin-partner-card__tag">Smart Contracts</span>
+          </div>
+
+        </div>
+        <button class="fin-partners__arrow fin-partners__arrow--prev" id="finPrev" aria-label="Anterior">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="fin-partners__arrow fin-partners__arrow--next" id="finNext" aria-label="Próximo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PARCEIROS TECNOLÓGICOS ========== -->
+  <section class="tech-partners section" id="tech-parceiros">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Stack</span>
+        <h2 class="section__title font-display">Parceiros Tecnológicos</h2>
+        <p class="section__desc">Tecnologias de ponta que potencializam nossas entregas</p>
+        <div class="section__divider"></div>
+      </div>
+      <div class="tech-partners__grid reveal">
+
+        <div class="tech-partner-card">
+          <div class="tech-partner-card__logo">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="#000000" xmlns="http://www.w3.org/2000/svg"><path d="m12 1.608 12 20.784H0Z"/></svg>
+          </div>
+          <span class="tech-partner-card__name">Vercel</span>
+          <span class="tech-partner-card__tag">Deployment &amp; Edge</span>
+        </div>
+
+        <div class="tech-partner-card">
+          <div class="tech-partner-card__logo">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="#3FCF8E" xmlns="http://www.w3.org/2000/svg"><path d="M11.9 1.036c-.015-.986-1.26-1.41-1.874-.637L.764 12.05C-.33 13.427.65 15.455 2.409 15.455h9.579l.113 7.51c.014.985 1.259 1.408 1.873.636l9.262-11.653c1.093-1.375.113-3.403-1.645-3.403h-9.642z"/></svg>
+          </div>
+          <span class="tech-partner-card__name">Supabase</span>
+          <span class="tech-partner-card__tag">Backend &amp; Database</span>
+        </div>
+
+        <div class="tech-partner-card">
+          <div class="tech-partner-card__logo">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="#5786FE" xmlns="http://www.w3.org/2000/svg"><path d="M23.748 4.651c-.254-.124-.364.113-.512.233-.051.04-.094.09-.137.137-.372.397-.806.657-1.373.626-.829-.046-1.537.214-2.163.848-.133-.782-.575-1.248-1.247-1.548-.352-.155-.708-.311-.955-.65-.172-.24-.219-.509-.305-.774-.055-.16-.11-.323-.293-.35-.2-.031-.278.136-.356.276-.313.572-.434 1.202-.422 1.84.027 1.436.633 2.58 1.838 3.393.137.094.172.187.129.323-.082.28-.18.553-.266.833-.055.179-.137.218-.328.14a5.5 5.5 0 0 1-1.737-1.179c-.857-.828-1.631-1.743-2.597-2.46a12 12 0 0 0-.689-.47c-.985-.957.13-1.743.387-1.836.27-.098.094-.433-.778-.428-.872.003-1.67.295-2.687.685a3 3 0 0 1-.465.136 9.6 9.6 0 0 0-2.883-.101c-1.885.21-3.39 1.1-4.497 2.622C.082 8.776-.231 10.854.152 13.02c.403 2.284 1.568 4.175 3.36 5.653 1.857 1.533 3.997 2.284 6.438 2.14 1.482-.085 3.132-.284 4.994-1.86.47.234.962.328 1.78.398.629.058 1.235-.031 1.705-.129.735-.155.684-.836.418-.961-2.155-1.004-1.682-.595-2.112-.926 1.095-1.295 2.768-3.598 3.284-6.733.05-.346.115-.834.108-1.114-.004-.171.035-.238.23-.257a4.2 4.2 0 0 0 1.545-.475c1.397-.763 1.96-2.016 2.093-3.517.02-.23-.004-.467-.247-.588"/></svg>
+          </div>
+          <span class="tech-partner-card__name">DeepSeek</span>
+          <span class="tech-partner-card__tag">IA &amp; Modelos</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ========== METODOLOGIA ========== -->
   <section class="method section" id="metodologia">
     <div class="container">
@@ -739,25 +878,29 @@
       <div class="contact__grid">
         <div class="contact__form-wrapper reveal">
           <form class="contact__form" id="contactForm">
-            <div class="form__group">
-              <label class="form__label" for="formName">Nome</label>
-              <input class="form__input" type="text" id="formName" name="name" required placeholder="Seu nome">
-              <span class="form__error"></span>
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label" for="formName">Nome</label>
+                <input class="form__input" type="text" id="formName" name="name" required placeholder="Seu nome">
+                <span class="form__error"></span>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="formEmail">E-mail</label>
+                <input class="form__input" type="email" id="formEmail" name="email" required placeholder="seu@email.com">
+                <span class="form__error"></span>
+              </div>
             </div>
-            <div class="form__group">
-              <label class="form__label" for="formEmail">E-mail</label>
-              <input class="form__input" type="email" id="formEmail" name="email" required placeholder="seu@email.com">
-              <span class="form__error"></span>
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="formPhone">Telefone</label>
-              <input class="form__input" type="tel" id="formPhone" name="phone" placeholder="(11) 99999-9999">
-              <span class="form__error"></span>
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="formCompany">Empresa</label>
-              <input class="form__input" type="text" id="formCompany" name="company" placeholder="Sua empresa">
-              <span class="form__error"></span>
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label" for="formPhone">Telefone</label>
+                <input class="form__input" type="tel" id="formPhone" name="phone" placeholder="(11) 99999-9999">
+                <span class="form__error"></span>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="formCompany">Empresa</label>
+                <input class="form__input" type="text" id="formCompany" name="company" placeholder="Sua empresa">
+                <span class="form__error"></span>
+              </div>
             </div>
             <div class="form__group">
               <label class="form__label" for="formMessage">Mensagem</label>

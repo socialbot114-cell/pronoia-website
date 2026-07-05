@@ -419,7 +419,36 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach(el => counterObserver.observe(el));
   }
 
-  // ========== 11. TESTIMONIAL CAROUSEL ==========
+  // ========== 11. FINANCIAL PARTNERS CAROUSEL ==========
+  const finTrack = get('finPartnersTrack');
+  const finPrev = get('finPrev');
+  const finNext = get('finNext');
+  if (finTrack) {
+    const finCards = qsa('.fin-partner-card', finTrack);
+    let finIndex = 0;
+    const getVisibleCount = () => {
+      const w = window.innerWidth;
+      if (w <= 480) return 2;
+      if (w <= 768) return 3;
+      return 4;
+    };
+    const updateFinCarousel = () => {
+      const visible = getVisibleCount();
+      const maxIndex = Math.max(0, finCards.length - visible);
+      finIndex = Math.min(finIndex, maxIndex);
+      const cardWidth = finCards[0].offsetWidth + 20;
+      finTrack.style.transform = `translateX(-${finIndex * cardWidth}px)`;
+      if (finPrev) finPrev.style.opacity = finIndex === 0 ? '0.3' : '1';
+      if (finNext) finNext.style.opacity = finIndex >= maxIndex ? '0.3' : '1';
+    };
+    if (finPrev) finPrev.addEventListener('click', () => { finIndex = Math.max(0, finIndex - 1); updateFinCarousel(); });
+    if (finNext) finNext.addEventListener('click', () => { finIndex++; updateFinCarousel(); });
+    let finResize;
+    window.addEventListener('resize', () => { clearTimeout(finResize); finResize = setTimeout(updateFinCarousel, 200); });
+    updateFinCarousel();
+  }
+
+  // ========== 12. TESTIMONIAL CAROUSEL ==========
   const carousel = qs('.carousel');
   if (carousel) {
     const track = get('carouselTrack') || qs('.carousel__track', carousel);
