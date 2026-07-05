@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PronoiA — Consultoria Empresarial. Transformamos desafios em estratégias de crescimento para o seu negócio.">
+  <meta name="keywords" content="consultoria empresarial, estratégia, growth, marketing, inovação, liderança, data analytics">
+  <meta name="author" content="PronoiA">
+  <meta property="og:title" content="PronoiA — Consultoria Estratégica">
+  <meta property="og:description" content="Transformamos desafios em estratégias de crescimento.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pronoia.com.br">
+  <meta property="og:image" content="https://pronoia.com.br/assets/og-image.jpg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>PronoiA — Consultoria Estratégica</title>
+</head>
+<body>
+
+  <!-- ========== PAGE LOADER ========== -->
+  <div class="page-loader" id="pageLoader">
+    <div class="page-loader__spinner"></div>
+  </div>
+
+  <!-- ========== PROGRESS BAR ========== -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- ========== SKIP TO CONTENT ========== -->
+  <a href="#hero" class="skip-link">Pular para o conteúdo</a>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <div class="header__logo">
+        <a href="#hero" aria-label="PronoiA — Página inicial">
+          <svg width="130" height="32" viewBox="0 0 130 32" fill="none">
+            <defs>
+              <linearGradient id="logo-grad" x1="0" y1="0" x2="32" y2="32">
+                <stop offset="0%" stop-color="#3b82f6"/>
+                <stop offset="100%" stop-color="#1a56db"/>
+              </linearGradient>
+            </defs>
+            <rect x="2" y="2" width="28" height="28" rx="8" fill="url(#logo-grad)"/>
+            <path d="M11 16h10M16 11v10" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+            <text x="38" y="22" font-family="Inter,sans-serif" font-weight="800" font-size="18" fill="currentColor" letter-spacing="-0.3">PronoiA</text>
+          </svg>
+        </a>
+      </div>
+      <button class="header__toggle" id="headerToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="header__overlay" id="headerOverlay"></div>
+      <nav class="header__nav" id="headerNav">
+        <ul class="header__nav-list">
+          <li><a href="#hero" class="header__nav-link header__nav-link--active">Início</a></li>
+          <li><a href="#quem-somos" class="header__nav-link">Quem Somos</a></li>
+          <li><a href="#solucoes" class="header__nav-link">Soluções</a></li>
+          <li><a href="#metodologia" class="header__nav-link">Metodologia</a></li>
+          <li><a href="#parceiros" class="header__nav-link">Parceiros</a></li>
+          <li><a href="#clientes" class="header__nav-link">Clientes</a></li>
+          <li><a href="#resultados" class="header__nav-link">Resultados</a></li>
+          <li><a href="#contato" class="header__nav-link">Contato</a></li>
+        </ul>
+        <a href="#contato" class="header__cta btn btn--primary">Fale Conosco</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero section" id="hero">
+    <div class="hero__video-bg">
+      <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=800&fit=crop&auto=format">
+        <source src="https://www.shutterstock.com/shutterstock/videos/3851460793/preview/stock-footage-new-york-city-october-a-day-time-lapse-vertical-view-of-traffic-on-th-avenue-in.webm" type="video/webm">
+      </video>
+      <div class="hero__video-overlay"></div>
+    </div>
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero__inner container">
+      <div class="hero__content">
+        <span class="hero__tag section__tag reveal">Consultoria Estratégica</span>
+        <h1 class="hero__title reveal" data-delay="100">
+          Transformamos desafios em <span class="hero__title--highlight">estratégias de crescimento</span>
+        </h1>
+        <p class="hero__subtitle reveal" data-delay="200">
+          Combinamos visão estratégica, dados e inovação para impulsionar resultados reais no seu negócio. Há mais de 15 anos transformando empresas.
+        </p>
+        <div class="hero__actions reveal" data-delay="300">
+          <a href="#lead-magnet" class="btn btn--primary btn--cta">Diagnóstico Gratuito</a>
+          <a href="#solucoes" class="btn btn--outline">Conhecer Soluções</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__graphic">
+          <svg width="400" height="400" viewBox="0 0 400 400" fill="none">
+            <circle cx="200" cy="200" r="180" stroke="var(--primary-light)" stroke-width="1" stroke-dasharray="4 4" opacity="0.15"/>
+            <circle cx="200" cy="200" r="140" stroke="var(--primary-light)" stroke-width="1.5" opacity="0.2"/>
+            <circle cx="200" cy="200" r="100" stroke="var(--primary-light)" stroke-width="2" opacity="0.3"/>
+            <circle cx="200" cy="200" r="60" stroke="var(--accent)" stroke-width="2" fill="var(--primary-light)" fill-opacity="0.06"/>
+            <line x1="200" y1="40" x2="200" y2="360" stroke="var(--primary-light)" stroke-width="1" opacity="0.12"/>
+            <line x1="40" y1="200" x2="360" y2="200" stroke="var(--primary-light)" stroke-width="1" opacity="0.12"/>
+            <circle cx="300" cy="120" r="12" fill="var(--accent)" opacity="0.4"/>
+            <circle cx="100" cy="280" r="8" fill="var(--primary-light)" opacity="0.3"/>
+            <circle cx="320" cy="290" r="6" fill="var(--accent)" opacity="0.25"/>
+            <circle cx="80" cy="110" r="10" fill="var(--primary-light)" opacity="0.2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== QUEM SOMOS ========== -->
+  <section class="about section" id="quem-somos">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Sobre Nós</span>
+        <h2 class="section__title font-display">Quem Somos</h2>
+        <p class="section__desc">Uma consultoria que une estratégia, dados e pessoas para transformar negócios</p>
+        <div class="section__divider"></div>
+      </div>
+      <div class="about__grid">
+        <div class="about__left">
+          <div class="about__text reveal">
+            <p class="about__paragraph">Somos um time de consultores apaixonados por resolver desafios complexos. Nascemos da convicção de que toda empresa tem potencial de crescimento — e que o caminho certo combina análise profunda, criatividade estratégica e execução disciplinada.</p>
+            <p class="about__paragraph">Atendemos desde médias empresas até grandes corporações em sete setores diferentes, sempre com foco em resultados mensuráveis e transformação real.</p>
+            <a href="#solucoes" class="btn btn--primary about__cta reveal">Veja como podemos ajudar</a>
+          </div>
+          <div class="about__image reveal" data-delay="100">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop&auto=format&q=80" alt="Equipe PronoiA em reunião" loading="lazy">
+          </div>
+        </div>
+        <div class="about__stats reveal" data-delay="150">
+          <div class="stat-card">
+            <span class="stat-card__number" data-count="120">0</span>
+            <span class="stat-card__label">empresas atendidas</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__number" data-count="15">0</span>
+            <span class="stat-card__label">anos de mercado</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__number" data-count="7">0</span>
+            <span class="stat-card__label">setores de atuação</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__number" data-count="97">0</span>
+            <span class="stat-card__label">% satisfação dos clientes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EQUIPE ========== -->
+  <section class="team section" id="equipe">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Nosso Time</span>
+        <h2 class="section__title font-display">Equipe</h2>
+        <p class="section__desc">Conheça os líderes que conduzem cada projeto com excelência</p>
+        <div class="section__divider"></div>
+      </div>
+      <div class="team__grid">
+        <div class="team-card reveal" data-delay="0">
+          <div class="team-card__image team-card__image--1">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&auto=format&q=80" alt="Carlos Mendes" loading="lazy">
+          </div>
+          <h3 class="team-card__name">Carlos Mendes</h3>
+          <span class="team-card__role">CEO & Consultor de Estratégia</span>
+          <p class="team-card__bio">MBA em Stanford, 20+ anos liderando transformações em grandes corporações. Especialista em reposicionamento estratégico.</p>
+        </div>
+        <div class="team-card reveal" data-delay="100">
+          <div class="team-card__image team-card__image--2">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&auto=format&q=80" alt="Ana Costa" loading="lazy">
+          </div>
+          <h3 class="team-card__name">Ana Costa</h3>
+          <span class="team-card__role">Diretora de Operações</span>
+          <p class="team-card__bio">Ex-COO de scale-up premiada, lidera a entrega dos projetos com foco em processos, prazos e qualidade.</p>
+        </div>
+        <div class="team-card reveal" data-delay="200">
+          <div class="team-card__image team-card__image--3">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&auto=format&q=80" alt="Rafael Oliveira" loading="lazy">
+          </div>
+          <h3 class="team-card__name">Rafael Oliveira</h3>
+          <span class="team-card__role">CTO & Inovação</span>
+          <p class="team-card__bio">PhD em Ciência da Computação, especialista em transformação digital, IA aplicada e inovação corporativa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SOLUÇÕES ========== -->
+  <section class="services section" id="solucoes">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">O Que Fazemos</span>
+        <h2 class="section__title font-display">Soluções</h2>
+        <p class="section__desc">Da estratégia à execução, entregamos resultados que transformam</p>
+        <div class="section__divider"></div>
+      </div>
+      <div class="services__carousel" id="servicesCarousel">
+        <div class="services__track" id="servicesTrack">
+
+          <div class="service-card" data-service="estrategia" data-index="0">
+            <div class="service-card__inner">
+              <div class="service-card__front">
+                <div class="service-card__icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="2" fill="none"/><path d="M10 20h20M20 10v20" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="20" r="4" fill="currentColor"/></svg>
+                </div>
+                <span class="service-card__number">01</span>
+                <h3 class="service-card__title">Estratégia Empresarial</h3>
+                <p class="service-card__desc">Planejamento estratégico, reposicionamento de marca e definição de roadmap de crescimento.</p>
+                <span class="service-card__hint">Clique para ver detalhes</span>
+              </div>
+              <div class="service-card__back">
+                <span class="service-card__back-label">Entregas</span>
+                <ul class="service-card__list">
+                  <li>Análise de mercado e concorrência</li>
+                  <li>Definição de visão e metas</li>
+                  <li>Planos de ação com KPIs</li>
+                  <li>Monitoramento trimestral</li>
+                </ul>
+                <a href="#contato" class="btn btn--primary service-card__action">Solicitar Orçamento</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card" data-service="marketing" data-index="1">
+            <div class="service-card__inner">
+              <div class="service-card__front">
+                <div class="service-card__icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M6 20l10-8v16l-10-8z" fill="currentColor"/><rect x="20" y="12" width="3" height="16" rx="1.5" fill="currentColor"/><rect x="26" y="16" width="3" height="12" rx="1.5" fill="currentColor"/><rect x="32" y="20" width="3" height="8" rx="1.5" fill="currentColor"/></svg>
+                </div>
+                <span class="service-card__number">02</span>
+                <h3 class="service-card__title">Marketing & Growth</h3>
+                <p class="service-card__desc">Estratégias de crescimento, branding e marketing digital baseado em dados.</p>
+                <span class="service-card__hint">Clique para ver detalhes</span>
+              </div>
+              <div class="service-card__back">
+                <span class="service-card__back-label">Entregas</span>
+                <ul class="service-card__list">
+                  <li>Growth hacking e experimentação</li>
+                  <li>Branding e posicionamento</li>
+                  <li>Performance marketing</li>
+                  <li>Funil de vendas e conversão</li>
+                </ul>
+                <a href="#contato" class="btn btn--primary service-card__action">Solicitar Orçamento</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card" data-service="inovacao" data-index="2">
+            <div class="service-card__inner">
+              <div class="service-card__front">
+                <div class="service-card__icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 4v8M20 28v8M4 20h8M28 20h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                </div>
+                <span class="service-card__number">03</span>
+                <h3 class="service-card__title">Inovação & Transformação</h3>
+                <p class="service-card__desc">Transformação digital, inovação de processos e modelos de negócio.</p>
+                <span class="service-card__hint">Clique para ver detalhes</span>
+              </div>
+              <div class="service-card__back">
+                <span class="service-card__back-label">Entregas</span>
+                <ul class="service-card__list">
+                  <li>Diagnóstico de maturidade digital</li>
+                  <li>Automação e IA aplicada</li>
+                  <li>Novos modelos de negócio</li>
+                  <li>Roadmap de inovação</li>
+                </ul>
+                <a href="#contato" class="btn btn--primary service-card__action">Solicitar Orçamento</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card" data-service="lideranca" data-index="3">
+            <div class="service-card__inner">
+              <div class="service-card__front">
+                <div class="service-card__icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="14" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="26" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M4 30c0-6 6-10 10-10s6 4 6 10M20 20c4 0 10 4 10 10" stroke="currentColor" stroke-width="2"/></svg>
+                </div>
+                <span class="service-card__number">04</span>
+                <h3 class="service-card__title">Liderança & Cultura</h3>
+                <p class="service-card__desc">Desenvolvimento de lideranças, gestão da mudança e cultura organizacional.</p>
+                <span class="service-card__hint">Clique para ver detalhes</span>
+              </div>
+              <div class="service-card__back">
+                <span class="service-card__back-label">Entregas</span>
+                <ul class="service-card__list">
+                  <li>Programas de liderança</li>
+                  <li>Gestão da mudança</li>
+                  <li>OKRs e alinhamento cultural</li>
+                  <li>Workshops imersivos</li>
+                </ul>
+                <a href="#contato" class="btn btn--primary service-card__action">Solicitar Orçamento</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card" data-service="analytics" data-index="4">
+            <div class="service-card__inner">
+              <div class="service-card__front">
+                <div class="service-card__icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="20" width="6" height="16" rx="2" fill="currentColor" opacity="0.5"/><rect x="13" y="14" width="6" height="22" rx="2" fill="currentColor" opacity="0.7"/><rect x="22" y="8" width="6" height="28" rx="2" fill="currentColor"/><rect x="31" y="16" width="6" height="20" rx="2" fill="currentColor" opacity="0.5"/></svg>
+                </div>
+                <span class="service-card__number">05</span>
+                <h3 class="service-card__title">Analytics & Data</h3>
+                <p class="service-card__desc">Business intelligence, análise preditiva e dashboards para decisões informadas.</p>
+                <span class="service-card__hint">Clique para ver detalhes</span>
+              </div>
+              <div class="service-card__back">
+                <span class="service-card__back-label">Entregas</span>
+                <ul class="service-card__list">
+                  <li>Dashboards executivos</li>
+                  <li>Modelagem preditiva</li>
+                  <li>Data storytelling</li>
+                  <li>Integração de fontes</li>
+                </ul>
+                <a href="#contato" class="btn btn--primary service-card__action">Solicitar Orçamento</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card service-card--lead" data-service="lead" data-index="5">
+            <div class="service-card__inner">
+              <div class="service-card__front">
+                <div class="service-card__icon">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 6v28M6 20h28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                </div>
+                <span class="service-card__number">06</span>
+                <h3 class="service-card__title">Diagnóstico Gratuito</h3>
+                <p class="service-card__desc">Receba uma análise personalizada do seu negócio com recomendações acionáveis.</p>
+                <a href="#lead-magnet" class="btn btn--primary service-card__action">Quero meu diagnóstico</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="services__nav" id="servicesNav">
+        <button class="services__arrow services__arrow--prev" id="servicesPrev" aria-label="Anterior">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="services__dots" id="servicesDots">
+          <span class="services__dot active" data-index="0"></span>
+          <span class="services__dot" data-index="1"></span>
+          <span class="services__dot" data-index="2"></span>
+          <span class="services__dot" data-index="3"></span>
+          <span class="services__dot" data-index="4"></span>
+          <span class="services__dot" data-index="5"></span>
+        </div>
+        <button class="services__arrow services__arrow--next" id="servicesNext" aria-label="Próximo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+
+      <!-- ========== LEAD MAGNET ========== -->
+      <div class="lead-magnet reveal" id="lead-magnet">
+        <h3 class="lead-magnet__title">Calculadora de Valor</h3>
+        <p>Preencha seus dados e descubra o potencial de crescimento do seu negócio.</p>
+        <form class="lead-magnet__form" id="leadForm">
+          <div class="form__group">
+            <label class="form__label" for="leadName">Nome</label>
+            <input class="form__input" type="text" id="leadName" name="name" required placeholder="Seu nome">
+            <span class="form__error"></span>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="leadEmail">E-mail</label>
+            <input class="form__input" type="email" id="leadEmail" name="email" required placeholder="seu@email.com">
+            <span class="form__error"></span>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="leadSector">Setor</label>
+            <select class="form__input" id="leadSector" name="sector" required>
+              <option value="">Selecione um setor</option>
+              <option value="Setor Público">Setor Público</option>
+              <option value="Saúde">Saúde</option>
+              <option value="Educação">Educação</option>
+              <option value="Tecnologia">Tecnologia</option>
+              <option value="Varejo">Varejo</option>
+              <option value="Indústria">Indústria</option>
+              <option value="Serviços">Serviços</option>
+            </select>
+            <span class="form__error"></span>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="leadChallenge">Maior Desafio</label>
+            <select class="form__input" id="leadChallenge" name="challenge" required>
+              <option value="">Selecione um desafio</option>
+              <option value="Transformação Digital">Transformação Digital</option>
+              <option value="Otimização de Processos">Otimização de Processos</option>
+              <option value="Gestão da Mudança">Gestão da Mudança</option>
+              <option value="Inovação">Inovação</option>
+              <option value="Outro">Outro</option>
+            </select>
+            <span class="form__error"></span>
+          </div>
+          <button class="form__submit btn btn--primary" type="submit">Calcular Potencial</button>
+          <div class="form-feedback" id="leadSuccess">
+            Recebemos seus dados! Em breve enviaremos sua calculadora personalizada.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== PARCEIROS TECNOLÓGICOS ========== -->
+  <section class="partners section" id="parceiros">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Parceiros</span>
+        <h2 class="section__title font-display">Nossos Parceiros Tecnológicos</h2>
+        <p class="section__desc">Tecnologias de ponta que potencializam nossas entregas</p>
+        <div class="section__divider"></div>
+      </div>
+      <div class="partners__intro reveal">
+        <p>Trabalhamos com as plataformas e provedores mais inovadores do mercado para garantir que cada projeto tenha a melhor infraestrutura, os modelos mais avançados e as ferramentas mais robustas disponíveis.</p>
+      </div>
+      <div class="partners__grid">
+
+        <div class="partner-card reveal" data-delay="0">
+          <div class="partner-card__logo">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="#5786FE" xmlns="http://www.w3.org/2000/svg"><path d="M23.748 4.651c-.254-.124-.364.113-.512.233-.051.04-.094.09-.137.137-.372.397-.806.657-1.373.626-.829-.046-1.537.214-2.163.848-.133-.782-.575-1.248-1.247-1.548-.352-.155-.708-.311-.955-.65-.172-.24-.219-.509-.305-.774-.055-.16-.11-.323-.293-.35-.2-.031-.278.136-.356.276-.313.572-.434 1.202-.422 1.84.027 1.436.633 2.58 1.838 3.393.137.094.172.187.129.323-.082.28-.18.553-.266.833-.055.179-.137.218-.328.14a5.5 5.5 0 0 1-1.737-1.179c-.857-.828-1.631-1.743-2.597-2.46a12 12 0 0 0-.689-.47c-.985-.957.13-1.743.387-1.836.27-.098.094-.433-.778-.428-.872.003-1.67.295-2.687.685a3 3 0 0 1-.465.136 9.6 9.6 0 0 0-2.883-.101c-1.885.21-3.39 1.1-4.497 2.622C.082 8.776-.231 10.854.152 13.02c.403 2.284 1.568 4.175 3.36 5.653 1.857 1.533 3.997 2.284 6.438 2.14 1.482-.085 3.132-.284 4.994-1.86.47.234.962.328 1.78.398.629.058 1.235-.031 1.705-.129.735-.155.684-.836.418-.961-2.155-1.004-1.682-.595-2.112-.926 1.095-1.295 2.768-3.598 3.284-6.733.05-.346.115-.834.108-1.114-.004-.171.035-.238.23-.257a4.2 4.2 0 0 0 1.545-.475c1.397-.763 1.96-2.016 2.093-3.517.02-.23-.004-.467-.247-.588M11.58 18.168c-2.088-1.642-3.101-2.183-3.52-2.16-.39.024-.32.472-.234.763.09.288.207.487.371.74.114.167.192.416-.113.603-.673.416-1.842-.14-1.897-.168-1.361-.801-2.5-1.86-3.301-3.306-.775-1.393-1.225-2.888-1.299-4.482-.02-.385.094-.522.477-.592a4.7 4.7 0 0 1 1.53-.038c2.131.311 3.946 1.264 5.467 2.774.868.86 1.525 1.887 2.202 2.89.72 1.066 1.494 2.082 2.48 2.915.348.291.626.513.892.677-.802.09-2.14.109-3.055-.615zm1.001-6.44a.306.306 0 0 1 .415-.287.3.3 0 0 1 .113.074.3.3 0 0 1 .086.214c0 .17-.136.307-.308.307a.303.303 0 0 1-.306-.307m3.11 1.596c-.2.081-.4.151-.591.16a1.25 1.25 0 0 1-.798-.254c-.274-.23-.47-.358-.551-.758a1.7 1.7 0 0 1 .015-.588c.07-.327-.007-.537-.238-.727-.188-.156-.426-.199-.689-.199a.6.6 0 0 1-.254-.078.253.253 0 0 1-.114-.358 1 1 0 0 1 .192-.21c.356-.202.767-.136 1.146.016.352.144.618.408 1.001.782.392.451.462.576.685.915.176.264.336.536.446.848.066.194-.02.353-.25.45"/></svg>
+          </div>
+          <span class="partner-card__name">DeepSeek</span>
+          <span class="partner-card__tag">IA &amp; Modelos</span>
+        </div>
+
+        <div class="partner-card reveal" data-delay="50">
+          <div class="partner-card__logo">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="#FF6A00" xmlns="http://www.w3.org/2000/svg"><path d="M3.996 4.517h5.291L8.01 6.324 4.153 7.506a1.668 1.668 0 0 0-1.165 1.601v5.786a1.668 1.668 0 0 0 1.165 1.6l3.857 1.183 1.277 1.807H3.996A3.996 3.996 0 0 1 0 15.487V8.513a3.996 3.996 0 0 1 3.996-3.996m16.008 0h-5.291l1.277 1.807 3.857 1.182c.715.227 1.17.889 1.165 1.601v5.786a1.668 1.668 0 0 1-1.165 1.6l-3.857 1.183-1.277 1.807h5.291A3.996 3.996 0 0 0 24 15.487V8.513a3.996 3.996 0 0 0-3.996-3.996m-4.007 8.345H8.002v-1.804h7.995Z"/></svg>
+          </div>
+          <span class="partner-card__name">Alibaba Cloud</span>
+          <span class="partner-card__tag">Cloud Computing</span>
+        </div>
+
+        <div class="partner-card reveal" data-delay="100">
+          <div class="partner-card__logo">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="#6950EF" xmlns="http://www.w3.org/2000/svg"><path d="M23.919 14.545 20.817 9.17l1.47-2.544a.56.56 0 0 0 0-.566l-1.633-2.83a.57.57 0 0 0-.49-.283h-6.207L12.487.402a.57.57 0 0 0-.49-.284H8.732a.56.56 0 0 0-.49.284L5.139 5.775h-2.94a.56.56 0 0 0-.49.284L.077 8.887a.56.56 0 0 0 0 .567L3.18 14.83l-1.47 2.545a.56.56 0 0 0 0 .566l1.634 2.83a.57.57 0 0 0 .49.283h6.205l1.47 2.545a.57.57 0 0 0 .49.284h3.266a.57.57 0 0 0 .49-.284l3.104-5.375h2.94a.57.57 0 0 0 .49-.283l1.634-2.828a.55.55 0 0 0-.004-.568M8.733.686l1.634 2.828-1.634 2.828H21.8L20.164 9.17H7.425L5.63 6.06Zm1.306 19.801-6.205-.002 1.634-2.83h3.265L2.201 6.344h3.267q3.182 5.517 6.367 11.032zm10.124-5.66L18.53 12l-6.532 11.315-1.634-2.83c2.129-3.673 4.25-7.351 6.373-11.028h3.592l3.102 5.374z"/></svg>
+          </div>
+          <span class="partner-card__name">Qwen</span>
+          <span class="partner-card__tag">LLM &amp; IA Generativa</span>
+        </div>
+
+        <div class="partner-card reveal" data-delay="150">
+          <div class="partner-card__logo">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="#3FCF8E" xmlns="http://www.w3.org/2000/svg"><path d="M11.9 1.036c-.015-.986-1.26-1.41-1.874-.637L.764 12.05C-.33 13.427.65 15.455 2.409 15.455h9.579l.113 7.51c.014.985 1.259 1.408 1.873.636l9.262-11.653c1.093-1.375.113-3.403-1.645-3.403h-9.642z"/></svg>
+          </div>
+          <span class="partner-card__name">Supabase</span>
+          <span class="partner-card__tag">Backend &amp; Database</span>
+        </div>
+
+        <div class="partner-card reveal" data-delay="200">
+          <div class="partner-card__logo">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="#000000" xmlns="http://www.w3.org/2000/svg"><path d="m12 1.608 12 20.784H0Z"/></svg>
+          </div>
+          <span class="partner-card__name">Vercel</span>
+          <span class="partner-card__tag">Deployment &amp; Edge</span>
+        </div>
+
+        <div class="partner-card reveal" data-delay="250">
+          <div class="partner-card__logo">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="#FFD21E" xmlns="http://www.w3.org/2000/svg"><path d="M12.025 1.13c-5.77 0-10.449 4.647-10.449 10.378 0 1.112.178 2.181.503 3.185.064-.222.203-.444.416-.577a.96.96 0 0 1 .524-.15c.293 0 .584.124.84.284.278.173.48.408.71.694.226.282.458.611.684.951v-.014c.017-.324.106-.622.264-.874s.403-.487.762-.543c.3-.047.596.06.787.203s.31.313.4.467c.15.257.212.468.233.542.01.026.653 1.552 1.657 2.54.616.605 1.01 1.223 1.082 1.912.055.537-.096 1.059-.38 1.572.637.121 1.294.187 1.967.187.657 0 1.298-.063 1.921-.178-.287-.517-.44-1.041-.384-1.581.07-.69.465-1.307 1.081-1.913 1.004-.987 1.647-2.513 1.!657-2.539.021-.074.083-.285.233-.542.09-.154.208-.323.4-.467a1.08 1.08 0 0 1 .787-.203c.359.056.604.29.762.543s.247.55.265.874v.015c.225-.34.457-.67.683-.952.23-.286.432-.52.71-.694.257-.16.547-.284.84-.285a.97.97 0 0 1 .524.151c.228.143.373.388.43.625l.006.04a10.3 10.3 0 0 0 .534-3.273c0-5.731-4.678-10.378-10.449-10.378M8.327 6.583a1.5 1.5 0 0 1 .713.174 1.487 1.487 0 0 1 .617 2.013c-.183.343-.762-.214-1.102-.094-.38.134-.532.914-.917.71a1.487 1.487 0 0 1 .69-2.803m7.486 0a1.487 1.487 0 0 1 .689 2.803c-.385.204-.536-.576-.916-.71-.34-.12-.92.437-1.103.094a1.487 1.487 0 0 1 .617-2.013 1.5 1.5 0 0 1 .713-.174m-10.68 1.55a.96.96 0 1 1 0 1.921.96.96 0 0 1 0-1.92m13.838 0a.96.96 0 1 1 0 1.92.96.96 0 0 1 0-1.92M8.489 11.458c.588.01 1.965 1.157 3.572 1.164 1.607-.007 2.984-1.155 3.572-1.164.196-.003.305.12.305.454 0 .886-.424 2.328-1.563 3.202-.22-.756-1.396-1.366-1.63-1.32q-.011.001-.02.006l-.044.026-.01.008-.03.024q-.018.017-.035.036l-.032.04a1 1 0 0 0-.058.09l-.014.025q-.049.088-.11.19a1 1 0 0 1-.083.116 1.2 1.2 0 0 1-.173.18q-.035.029-.075.058a1.3 1.3 0 0 1-.251-.243 1 1 0 0 1-.076-.107c-.124-.193-.177-.363-.337-.444-.034-.016-.104-.008-.2.022q-.094.03-.216.087-.06.028-.125.063l-.13.074q-.067.04-.136.086a3 3 0 0 0-.135.096 3 3 0 0 0-.26.219 2 2 0 0 0-.12.121 2 2 0 0 0-.106.128l-.002.002a2 2 0 0 0-.09.132l-.001.001a1.2 1.2 0 0 0-.105.212q-.013.036-.024.073c-1.139-.875-1.563-2.317-1.563-3.203 0-.334.109-.457.305-.454m.836 10.354c.824-1.19.766-2.082-.365-3.194-1.13-1.112-1.789-2.738-1.789-2.738s-.246-.945-.806-.858-.97 1.499.202 2.362c1.173.864-.233 1.45-.685.64-.45-.812-1.683-2.896-2.322-3.295s-1.089-.175-.938.647 2.822 2.813 2.562 3.244-1.176-.506-1.176-.506-2.866-2.567-3.49-1.898.473 1.23 2.037 2.16c1.564.932 1.686 1.178 1.464 1.53s-3.675-2.511-4-1.297c-.323 1.214 3.524 1.567 3.287 2.405-.238.839-2.71-1.587-3.216-.642-.506.946 3.49 2.056 3.522 2.064 1.29.33 4.568 1.028 5.713-.624m5.349 0c-.824-1.19-.766-2.082.365-3.194 1.13-1.112 1.789-2.738 1.789-2.738s.246-.945.806-.858.97 1.499-.202 2.362c-1.173.864.233 1.45.685.64.451-.812 1.683-2.896 2.322-3.295s1.089-.175.938.647-2.822 2.813-2.562 3.244 1.176-.506 1.176-.506 2.866-2.567 3.49-1.898-.473 1.23-2.037 2.16c-1.564.932-1.686 1.178-1.464 1.53s3.675-2.511 4-1.297c.323 1.214-3.524 1.567-3.287 2.405.238.839 2.71-1.587 3.216-.642.506.946-3.49 2.056-3.522 2.064-1.29.33-4.568 1.028-5.713-.624"/></svg>
+          </div>
+          <span class="partner-card__name">Hugging Face</span>
+          <span class="partner-card__tag">ML &amp; Community</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CLIENTES ========== -->
+  <section class="clients section" id="clientes">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Clientes</span>
+        <h2 class="section__title font-display">Empresas que Confiam na Gente</h2>
+        <p class="section__desc">Organizações que transformaram seus resultados com a PronoiA</p>
+        <div class="section__divider"></div>
+      </div>
+      <div class="clients__grid reveal">
+        <div class="client-logo" style="color: #1a56db;">
+          <svg width="120" height="40" viewBox="0 0 120 40" fill="none"><rect width="120" height="40" rx="4" fill="var(--surface)"/><text x="60" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="16" fill="currentColor">NovaTech</text></svg>
+        </div>
+        <div class="client-logo" style="color: #059669;">
+          <svg width="120" height="40" viewBox="0 0 120 40" fill="none"><rect width="120" height="40" rx="4" fill="var(--surface)"/><text x="60" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="16" fill="currentColor">HealthPlus</text></svg>
+        </div>
+        <div class="client-logo" style="color: #7c3aed;">
+          <svg width="120" height="40" viewBox="0 0 120 40" fill="none"><rect width="120" height="40" rx="4" fill="var(--surface)"/><text x="60" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="16" fill="currentColor">EducaBrasil</text></svg>
+        </div>
+        <div class="client-logo" style="color: #d97706;">
+          <svg width="120" height="40" viewBox="0 0 120 40" fill="none"><rect width="120" height="40" rx="4" fill="var(--surface)"/><text x="60" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="16" fill="currentColor">GreenField</text></svg>
+        </div>
+        <div class="client-logo" style="color: #dc2626;">
+          <svg width="120" height="40" viewBox="0 0 120 40" fill="none"><rect width="120" height="40" rx="4" fill="var(--surface)"/><text x="60" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="16" fill="currentColor">LinkVarejo</text></svg>
+        </div>
+        <div class="client-logo" style="color: #2563eb;">
+          <svg width="120" height="40" viewBox="0 0 120 40" fill="none"><rect width="120" height="40" rx="4" fill="var(--surface)"/><text x="60" y="25" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800" font-size="16" fill="currentColor">MegaServ</text></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== METODOLOGIA ========== -->
+  <section class="method section" id="metodologia">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Nosso Processo</span>
+        <h2 class="section__title font-display">Metodologia</h2>
+        <p class="section__desc">Quatro etapas comprovadas para transformar desafios em resultados</p>
+        <div class="section__divider"></div>
+      </div>
+      <div class="method__steps">
+        <div class="method-step reveal" data-delay="0">
+          <span class="method-step__number">01</span>
+          <div class="method-step__content">
+            <h3 class="method-step__title">Diagnóstico</h3>
+            <p class="method-step__desc">Mapeamento completo do negócio, análise de dados e identificação de oportunidades.</p>
+          </div>
+        </div>
+        <div class="method-step reveal" data-delay="100">
+          <span class="method-step__number">02</span>
+          <div class="method-step__content">
+            <h3 class="method-step__title">Estratégia</h3>
+            <p class="method-step__desc">Construção colaborativa do plano estratégico com metas claras e roadmap definido.</p>
+          </div>
+        </div>
+        <div class="method-step reveal" data-delay="200">
+          <span class="method-step__number">03</span>
+          <div class="method-step__content">
+            <h3 class="method-step__title">Execução</h3>
+            <p class="method-step__desc">Implementação ágil com squads multidisciplinares e acompanhamento contínuo.</p>
+          </div>
+        </div>
+        <div class="method-step reveal" data-delay="300">
+          <span class="method-step__number">04</span>
+          <div class="method-step__content">
+            <h3 class="method-step__title">Resultados</h3>
+            <p class="method-step__desc">Mensuração de impacto, ajustes iterativos e celebração das entregas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RESULTADOS ========== -->
+  <section class="results section" id="resultados">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Números</span>
+        <h2 class="section__title font-display">Resultados</h2>
+        <p class="section__desc">Métricas que falam por si</p>
+        <div class="section__divider"></div>
+      </div>
+      <div class="results__metrics reveal">
+        <div class="metric-card">
+          <span class="metric-card__number" data-count="350">0</span>
+          <span class="metric-card__suffix">%</span>
+          <span class="metric-card__label">aumento médio de receita</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-card__number" data-count="60">0</span>
+          <span class="metric-card__suffix">%</span>
+          <span class="metric-card__label">redução de custos operacionais</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-card__number" data-count="92">0</span>
+          <span class="metric-card__suffix">%</span>
+          <span class="metric-card__label">metas atingidas no prazo</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-card__number" data-count="4.8">0</span>
+          <span class="metric-card__suffix">/5</span>
+          <span class="metric-card__label">satisfação dos clientes</span>
+        </div>
+      </div>
+
+      <div class="results__carousel reveal">
+        <div class="carousel">
+          <div class="carousel__track" id="carouselTrack">
+            <div class="carousel__slide">
+              <div class="testimonial">
+                <div class="testimonial__stars" aria-label="5 de 5 estrelas">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="testimonial__text">"A PronoiA transformou nossa operação. Em 12 meses, dobramos nossa receita e reduzimos custos em 40%. A equipe é excepcional."</p>
+                <div class="testimonial__author">
+                  <div class="testimonial__avatar">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&auto=format&q=80" alt="Marcos Andrade" loading="lazy">
+                  </div>
+                  <div>
+                    <strong>Marcos Andrade</strong>
+                    <span>CEO da NovaTech</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel__slide">
+              <div class="testimonial">
+                <div class="testimonial__stars" aria-label="5 de 5 estrelas">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="testimonial__text">"A metodologia da PronoiA nos deu clareza estratégica. Saímos do vermelho para um crescimento sustentável em menos de um ano."</p>
+                <div class="testimonial__author">
+                  <div class="testimonial__avatar">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&auto=format&q=80" alt="Juliana Martins" loading="lazy">
+                  </div>
+                  <div>
+                    <strong>Juliana Martins</strong>
+                    <span>Diretora do Grupo EducaBrasil</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel__slide">
+              <div class="testimonial">
+                <div class="testimonial__stars" aria-label="5 de 5 estrelas">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="testimonial__text">"O trabalho de transformação digital foi impecável. Hoje somos referência em inovação no nosso setor graças à parceria com a PronoiA."</p>
+                <div class="testimonial__author">
+                  <div class="testimonial__avatar">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&auto=format&q=80" alt="Ricardo Lemos" loading="lazy">
+                  </div>
+                  <div>
+                    <strong>Ricardo Lemos</strong>
+                    <span>CTO da HealthPlus</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel__dots" id="carouselDots">
+            <span class="carousel__dot active" data-index="0"></span>
+            <span class="carousel__dot" data-index="1"></span>
+            <span class="carousel__dot" data-index="2"></span>
+          </div>
+          <button class="carousel__btn carousel__btn--prev" id="carouselPrev" aria-label="Anterior">&lsaquo;</button>
+          <button class="carousel__btn carousel__btn--next" id="carouselNext" aria-label="Próximo">&rsaquo;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CASES ========== -->
+  <section class="cases section" id="cases">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Cases</span>
+        <h2 class="section__title font-display">Casos de Sucesso</h2>
+        <p class="section__desc">Histórias reais de transformação</p>
+        <div class="section__divider"></div>
+      </div>
+      <div class="cases__grid">
+        <div class="case-card reveal" data-delay="0">
+          <div class="case-card__image">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=300&fit=crop&auto=format&q=80" alt="Reposicionamento da NovaTech" loading="lazy">
+            <div class="case-card__overlay"></div>
+          </div>
+          <div class="case-card__content">
+            <span class="case-card__tag">Estratégia</span>
+            <h3 class="case-card__title">Reposicionamento da NovaTech</h3>
+            <p class="case-card__desc">Reestruturamos a estratégia de go-to-market e reposicionamos a marca, resultando em crescimento acelerado.</p>
+            <span class="case-card__stat">+180% de crescimento em 18 meses</span>
+          </div>
+        </div>
+        <div class="case-card reveal" data-delay="100">
+          <div class="case-card__image">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=300&fit=crop&auto=format&q=80" alt="Digitalização da HealthPlus" loading="lazy">
+            <div class="case-card__overlay"></div>
+          </div>
+          <div class="case-card__content">
+            <span class="case-card__tag">Transformação Digital</span>
+            <h3 class="case-card__title">Digitalização da HealthPlus</h3>
+            <p class="case-card__desc">Implementamos processos digitais e automação que reduziram custos e melhoraram a experiência do paciente.</p>
+            <span class="case-card__stat">60% de redução de custos operacionais</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="faq section" id="faq">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">FAQ</span>
+        <h2 class="section__title font-display">Perguntas Frequentes</h2>
+        <p class="section__desc">Tire suas dúvidas sobre a PronoiA</p>
+        <div class="section__divider"></div>
+      </div>
+      <div class="faq__list" id="faqList">
+        <div class="faq-item">
+          <div class="faq-item__question">Quanto tempo dura um projeto típico?</div>
+          <div class="faq-item__answer">Nossos projetos variam de 3 a 12 meses, dependendo do escopo e da complexidade. Durante o diagnóstico gratuito definimos um cronograma personalizado.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item__question">Vocês atendem empresas de qualquer porte?</div>
+          <div class="faq-item__answer">Sim. Atendemos desde startups em escala até grandes corporações. Adaptamos nossa metodologia ao tamanho e maturidade do seu negócio.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item__question">O diagnóstico gratuito tem compromisso?</div>
+          <div class="faq-item__answer">Não. O diagnóstico é uma cortesia para entender seu negócio e apresentar oportunidades. Não há qualquer vínculo ou obrigação contratual.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-item__question">Como medimos os resultados?</div>
+          <div class="faq-item__answer">Utilizamos KPIs claros definidos no início do projeto, com dashboards em tempo real e relatórios mensais de acompanhamento.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTATO ========== -->
+  <section class="contact section" id="contato">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag">Fale Conosco</span>
+        <h2 class="section__title font-display">Contato</h2>
+        <p class="section__desc">Estamos prontos para ouvir você</p>
+        <div class="section__divider"></div>
+      </div>
+      <div class="contact__grid">
+        <div class="contact__form-wrapper reveal">
+          <form class="contact__form" id="contactForm">
+            <div class="form__group">
+              <label class="form__label" for="formName">Nome</label>
+              <input class="form__input" type="text" id="formName" name="name" required placeholder="Seu nome">
+              <span class="form__error"></span>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="formEmail">E-mail</label>
+              <input class="form__input" type="email" id="formEmail" name="email" required placeholder="seu@email.com">
+              <span class="form__error"></span>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="formPhone">Telefone</label>
+              <input class="form__input" type="tel" id="formPhone" name="phone" placeholder="(11) 99999-9999">
+              <span class="form__error"></span>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="formCompany">Empresa</label>
+              <input class="form__input" type="text" id="formCompany" name="company" placeholder="Sua empresa">
+              <span class="form__error"></span>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="formMessage">Mensagem</label>
+              <textarea class="form__textarea" id="formMessage" name="message" rows="5" required placeholder="Como podemos ajudar?"></textarea>
+              <span class="form__error"></span>
+            </div>
+            <button class="form__submit btn btn--primary" type="submit">Enviar Mensagem</button>
+          </form>
+        </div>
+        <div class="contact__info reveal" data-delay="150">
+          <div class="contact__info-card">
+            <div class="contact__info-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h4 class="contact__info-title">Endereço</h4>
+            <p class="contact__info-text">Av. Paulista, 1000 — 15° andar<br>Bela Vista, São Paulo — SP</p>
+          </div>
+          <div class="contact__info-card">
+            <div class="contact__info-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <h4 class="contact__info-title">E-mail</h4>
+            <a class="contact__info-link" href="mailto:contato@pronoia.com.br">contato@pronoia.com.br</a>
+          </div>
+          <div class="contact__info-card">
+            <div class="contact__info-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <h4 class="contact__info-title">Telefone</h4>
+            <a class="contact__info-link" href="tel:+5511999999999">(11) 99999-9999</a>
+          </div>
+          <div class="contact__social">
+            <a class="contact__social-link" href="#" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a class="contact__social-link" href="#" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a class="contact__social-link" href="#" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__inner container">
+      <div class="footer__brand">
+        <svg width="120" height="28" viewBox="0 0 120 28" fill="none">
+          <rect x="2" y="2" width="24" height="24" rx="6" fill="url(#logo-grad)" opacity="0.9"/>
+          <path d="M10 14h8M14 10v8" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+          <text x="32" y="20" font-family="Inter,sans-serif" font-weight="800" font-size="16" fill="currentColor" letter-spacing="-0.3">PronoiA</text>
+        </svg>
+        <p class="footer__tagline">Transformamos desafios em estratégias de crescimento.</p>
+      </div>
+      <div class="footer__links">
+        <h4 class="footer__heading">Navegação</h4>
+        <nav class="footer__nav">
+          <a class="footer__link" href="#hero">Início</a>
+          <a class="footer__link" href="#quem-somos">Quem Somos</a>
+          <a class="footer__link" href="#solucoes">Soluções</a>
+          <a class="footer__link" href="#metodologia">Metodologia</a>
+          <a class="footer__link" href="#parceiros">Parceiros</a>
+          <a class="footer__link" href="#clientes">Clientes</a>
+          <a class="footer__link" href="#resultados">Resultados</a>
+          <a class="footer__link" href="#contato">Contato</a>
+        </nav>
+      </div>
+      <div class="footer__contact">
+        <h4 class="footer__heading">Contato</h4>
+        <ul class="footer__contact-list">
+          <li>Av. Paulista, 1000 — 15° andar</li>
+          <li>São Paulo — SP</li>
+          <li><a class="footer__link" href="mailto:contato@pronoia.com.br">contato@pronoia.com.br</a></li>
+          <li><a class="footer__link" href="tel:+5511999999999">(11) 99999-9999</a></li>
+        </ul>
+      </div>
+      <div class="footer__newsletter">
+        <h4 class="footer__heading">Newsletter</h4>
+        <p class="footer__newsletter-desc">Receba insights e novidades</p>
+        <form class="footer__newsletter-form" id="newsletterForm">
+          <input type="email" class="footer__newsletter-input" placeholder="seu@email.com" aria-label="E-mail para newsletter" required>
+          <button type="submit" class="btn btn--primary footer__newsletter-btn">Inscrever</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <span class="footer__copy">&copy; 2026 PronoiA. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+  <!-- ========== FLOATING CTA ========== -->
+  <button class="floating-cta" aria-label="Fale Conosco">Fale Conosco</button>
+
+  <!-- ========== SCROLL TOP ========== -->
+  <button class="scroll-top" aria-label="Voltar ao topo">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- ========== COOKIE BANNER ========== -->
+  <div class="cookie-banner">
+    <p>Utilizamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="#">Política de Privacidade</a>.</p>
+    <button class="btn btn--primary" id="cookieAccept">Aceitar</button>
+  </div>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>
