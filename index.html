@@ -356,54 +356,6 @@
         </button>
       </div>
 
-      <!-- ========== LEAD MAGNET ========== -->
-      <div class="lead-magnet reveal" id="lead-magnet">
-        <h3 class="lead-magnet__title">Calculadora de Valor</h3>
-        <p>Preencha seus dados e descubra o potencial de crescimento do seu negócio.</p>
-        <form class="lead-magnet__form" id="leadForm">
-          <div class="form__group">
-            <label class="form__label" for="leadName">Nome</label>
-            <input class="form__input" type="text" id="leadName" name="name" required placeholder="Seu nome">
-            <span class="form__error"></span>
-          </div>
-          <div class="form__group">
-            <label class="form__label" for="leadEmail">E-mail</label>
-            <input class="form__input" type="email" id="leadEmail" name="email" required placeholder="seu@email.com">
-            <span class="form__error"></span>
-          </div>
-          <div class="form__group">
-            <label class="form__label" for="leadSector">Setor</label>
-            <select class="form__input" id="leadSector" name="sector" required>
-              <option value="">Selecione um setor</option>
-              <option value="Setor Público">Setor Público</option>
-              <option value="Saúde">Saúde</option>
-              <option value="Educação">Educação</option>
-              <option value="Tecnologia">Tecnologia</option>
-              <option value="Varejo">Varejo</option>
-              <option value="Indústria">Indústria</option>
-              <option value="Serviços">Serviços</option>
-            </select>
-            <span class="form__error"></span>
-          </div>
-          <div class="form__group">
-            <label class="form__label" for="leadChallenge">Maior Desafio</label>
-            <select class="form__input" id="leadChallenge" name="challenge" required>
-              <option value="">Selecione um desafio</option>
-              <option value="Transformação Digital">Transformação Digital</option>
-              <option value="Otimização de Processos">Otimização de Processos</option>
-              <option value="Gestão da Mudança">Gestão da Mudança</option>
-              <option value="Inovação">Inovação</option>
-              <option value="Outro">Outro</option>
-            </select>
-            <span class="form__error"></span>
-          </div>
-          <button class="form__submit btn btn--primary" type="submit">Calcular Potencial</button>
-          <div class="form-feedback" id="leadSuccess">
-            Recebemos seus dados! Em breve enviaremos sua calculadora personalizada.
-          </div>
-        </form>
-      </div>
-
     </div>
   </section>
 
@@ -733,7 +685,7 @@
     </div>
   </section>
 
-  <!-- ========== CASES ========== -->
+  <!-- ========== CASES DE SUCESSO ========== -->
   <section class="cases section" id="cases">
     <div class="container">
       <div class="section__header reveal">
@@ -870,6 +822,96 @@
       </div>
     </div>
   </div>
+
+  <!-- ========== CALCULADORA DE VALOR ========== -->
+  <section class="lead-magnet section" id="lead-magnet">
+    <div class="container">
+      <div class="lead-magnet__wrapper reveal">
+        <div class="lead-magnet__visual">
+          <div class="lead-magnet__visual-bg"></div>
+          <div class="lead-magnet__visual-content">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+              <circle cx="32" cy="32" r="28" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+              <path d="M20 40c4-8 8-12 12-12s8 4 12 12" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <circle cx="44" cy="28" r="4" fill="#fff"/>
+              <path d="M20 40h24" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-dasharray="3 3"/>
+            </svg>
+            <h3 class="lead-magnet__visual-title">Descubra o Potencial do Seu Negócio</h3>
+            <p class="lead-magnet__visual-text">Análise personalizada com base em dados reais do seu mercado</p>
+            <div class="lead-magnet__badges">
+              <div class="lead-magnet__badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>Gratuito</span>
+              </div>
+              <div class="lead-magnet__badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>48 horas</span>
+              </div>
+              <div class="lead-magnet__badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>Sem compromisso</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lead-magnet__form-side">
+          <span class="lead-magnet__tag">Calculadora de Valor</span>
+          <h3 class="lead-magnet__title">Quanto seu negócio pode crescer?</h3>
+          <p class="lead-magnet__subtitle">Preencha os dados e receba um diagnóstico personalizado com projeções de crescimento</p>
+          <form class="lead-magnet__form" id="leadForm">
+            <div class="lead-magnet__row">
+              <div class="form__group">
+                <label class="form__label" for="leadName">Nome</label>
+                <input class="form__input" type="text" id="leadName" name="name" required placeholder="Seu nome">
+                <span class="form__error"></span>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="leadEmail">E-mail</label>
+                <input class="form__input" type="email" id="leadEmail" name="email" required placeholder="seu@email.com">
+                <span class="form__error"></span>
+              </div>
+            </div>
+            <div class="lead-magnet__row">
+              <div class="form__group">
+                <label class="form__label" for="leadSector">Setor</label>
+                <select class="form__input" id="leadSector" name="sector" required>
+                  <option value="">Selecione</option>
+                  <option value="Setor Público">Setor Público</option>
+                  <option value="Saúde">Saúde</option>
+                  <option value="Educação">Educação</option>
+                  <option value="Tecnologia">Tecnologia</option>
+                  <option value="Varejo">Varejo</option>
+                  <option value="Indústria">Indústria</option>
+                  <option value="Serviços">Serviços</option>
+                </select>
+                <span class="form__error"></span>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="leadChallenge">Maior Desafio</label>
+                <select class="form__input" id="leadChallenge" name="challenge" required>
+                  <option value="">Selecione</option>
+                  <option value="Transformação Digital">Transformação Digital</option>
+                  <option value="Otimização de Processos">Otimização de Processos</option>
+                  <option value="Gestão da Mudança">Gestão da Mudança</option>
+                  <option value="Inovação">Inovação</option>
+                  <option value="Outro">Outro</option>
+                </select>
+                <span class="form__error"></span>
+              </div>
+            </div>
+            <button class="form__submit btn btn--primary" type="submit">
+              <span class="btn__text">Calcular Potencial</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <div class="form-feedback" id="leadSuccess">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              <span>Recebemos seus dados! Em breve enviaremos sua análise personalizada.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ========== FAQ ========== -->
   <section class="faq section" id="faq">
