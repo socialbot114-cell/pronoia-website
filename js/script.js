@@ -21,7 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const source = heroVideo.querySelector('source');
     if (source) {
       source.src = randomVideo;
+      heroVideo.referrerPolicy = 'no-referrer';
       heroVideo.load();
+      heroVideo.play().catch(() => {});
     }
   }
 
