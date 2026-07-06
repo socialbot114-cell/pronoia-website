@@ -737,6 +737,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ========== 23b. NEWSLETTER SECTION FORM ==========
+  const newsletterForm2 = get('newsletterForm2');
+  const newsletterSuccess = get('newsletterSuccess');
+  if (newsletterForm2) {
+    newsletterForm2.addEventListener('submit', e => {
+      e.preventDefault();
+      const input = qs('input', newsletterForm2);
+      const btn = qs('button', newsletterForm2);
+      if (input && btn && input.value.trim()) {
+        const originalHTML = btn.innerHTML;
+        btn.innerHTML = '<span>Enviando...</span>';
+        btn.disabled = true;
+        input.value = '';
+        setTimeout(() => {
+          newsletterForm2.style.display = 'none';
+          if (newsletterSuccess) {
+            newsletterSuccess.classList.add('visible');
+          }
+          setTimeout(() => {
+            newsletterForm2.style.display = '';
+            btn.innerHTML = originalHTML;
+            btn.disabled = false;
+            if (newsletterSuccess) {
+              newsletterSuccess.classList.remove('visible');
+            }
+          }, 4000);
+        }, 1200);
+      }
+    });
+  }
+
   // ========== 24. KEYBOARD NAV FOR CAROUSEL ==========
   if (carousel) {
     carousel.setAttribute('tabindex', '0');
