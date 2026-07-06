@@ -739,26 +739,34 @@
       <div class="section__header reveal">
         <span class="section__tag">Cases</span>
         <h2 class="section__title font-display">Casos de Sucesso</h2>
-        <p class="section__desc">Histórias reais de transformação</p>
+        <p class="section__desc">Histórias reais de transformação — clique para ver o projeto completo</p>
         <div class="section__divider"></div>
       </div>
       <div class="cases__grid">
-        <div class="case-card reveal" data-delay="0">
+        <div class="case-card reveal" data-delay="0" data-case="0">
           <div class="case-card__image">
             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=300&fit=crop&auto=format&q=80" alt="Reposicionamento da NovaTech" loading="lazy">
             <div class="case-card__overlay"></div>
+            <div class="case-card__hover">
+              <span>Ver projeto</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
           </div>
           <div class="case-card__content">
-            <span class="case-card__tag">Estratégia</span>
+            <span class="case-card__tag">Estratégia &amp; Growth</span>
             <h3 class="case-card__title">Reposicionamento da NovaTech</h3>
             <p class="case-card__desc">Reestruturamos a estratégia de go-to-market e reposicionamos a marca, resultando em crescimento acelerado.</p>
             <span class="case-card__stat">+180% de crescimento em 18 meses</span>
           </div>
         </div>
-        <div class="case-card reveal" data-delay="100">
+        <div class="case-card reveal" data-delay="100" data-case="1">
           <div class="case-card__image">
             <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=300&fit=crop&auto=format&q=80" alt="Digitalização da HealthPlus" loading="lazy">
             <div class="case-card__overlay"></div>
+            <div class="case-card__hover">
+              <span>Ver projeto</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
           </div>
           <div class="case-card__content">
             <span class="case-card__tag">Transformação Digital</span>
@@ -767,9 +775,101 @@
             <span class="case-card__stat">60% de redução de custos operacionais</span>
           </div>
         </div>
+        <div class="case-card reveal" data-delay="200" data-case="2">
+          <div class="case-card__image">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=300&fit=crop&auto=format&q=80" alt="Expansão Digital do EducaBrasil" loading="lazy">
+            <div class="case-card__overlay"></div>
+            <div class="case-card__hover">
+              <span>Ver projeto</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+          <div class="case-card__content">
+            <span class="case-card__tag">Marketing Digital</span>
+            <h3 class="case-card__title">Expansão do EducaBrasil</h3>
+            <p class="case-card__desc">Estratégia de marketing digital e SEO que multiplicou o alcance orgânico e a captação de alunos.</p>
+            <span class="case-card__stat">+250% de leads orgânicos em 12 meses</span>
+          </div>
+        </div>
+        <div class="case-card reveal" data-delay="300" data-case="3">
+          <div class="case-card__image">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=300&fit=crop&auto=format&q=80" alt="Otimização de Processos GreenField" loading="lazy">
+            <div class="case-card__overlay"></div>
+            <div class="case-card__hover">
+              <span>Ver projeto</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+          <div class="case-card__content">
+            <span class="case-card__tag">Processos &amp; IA</span>
+            <h3 class="case-card__title">Otimização da GreenField</h3>
+            <p class="case-card__desc">Automação de processos com IA que reduziu drasticamente o tempo operacional e custos.</p>
+            <span class="case-card__stat">45% de redução de tempo operacional</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- ========== CASE MODAL ========== -->
+  <div class="case-modal" id="caseModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="case-modal__overlay" id="caseModalOverlay"></div>
+    <div class="case-modal__content" id="caseModalContent">
+      <button class="case-modal__close" id="caseModalClose" aria-label="Fechar">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="case-modal__header">
+        <img class="case-modal__image" id="caseModalImage" src="" alt="">
+        <div class="case-modal__header-info">
+          <span class="case-modal__tag" id="caseModalTag"></span>
+          <h2 class="case-modal__title" id="caseModalTitle"></h2>
+          <p class="case-modal__subtitle" id="caseModalSubtitle"></p>
+        </div>
+      </div>
+      <div class="case-modal__body">
+        <section class="case-modal__section">
+          <h3 class="case-modal__section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11H5a2 2 0 00-2 2v7a2 2 0 002 2h14a2 2 0 002-2v-7a2 2 0 00-2-2h-4M9 11V7a3 3 0 116 0v4M9 11h6"/></svg>
+            O Desafio
+          </h3>
+          <p id="caseModalChallenge"></p>
+        </section>
+        <section class="case-modal__section">
+          <h3 class="case-modal__section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Nossa Solução
+          </h3>
+          <p id="caseModalSolution"></p>
+        </section>
+        <section class="case-modal__section">
+          <h3 class="case-modal__section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+            Stack Utilizada
+          </h3>
+          <div class="case-modal__tags" id="caseModalStack"></div>
+        </section>
+        <section class="case-modal__section">
+          <h3 class="case-modal__section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg>
+            Resultados
+          </h3>
+          <div class="case-modal__results" id="caseModalResults"></div>
+        </section>
+        <section class="case-modal__section">
+          <h3 class="case-modal__section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            Depoimento
+          </h3>
+          <blockquote class="case-modal__quote" id="caseModalQuote"></blockquote>
+          <cite class="case-modal__cite" id="caseModalCite"></cite>
+        </section>
+        <div class="case-modal__cta">
+          <p>Quer resultados como esses?</p>
+          <a href="#contato" class="btn btn--primary" id="caseModalCta">Fale Conosco</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ========== FAQ ========== -->
   <section class="faq section" id="faq">

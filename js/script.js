@@ -756,4 +756,149 @@ document.addEventListener('DOMContentLoaded', () => {
   if (canvas && window.innerWidth < 768) {
     initParticles(50);
   }
+
+  // ========== 26. CASE MODAL ==========
+  const caseData = [
+    {
+      tag: 'Estratégia & Growth',
+      title: 'Reposicionamento da NovaTech',
+      subtitle: 'Como transformamos uma empresa estagnada em referência do setor',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&auto=format&q=80',
+      challenge: 'A NovaTech era uma empresa de tecnologia com mais de 10 anos de mercado, mas enfrentava crescimento estagnado, marca desgastada e perda gradual de participação para concorrentes mais ágeis. O funil de vendas era ineficiente, o CAC estava alto e a equipe comercial não tinha clareza de posicionamento.',
+      solution: 'Conduzimos um reposicionamento completo de marca, reestruturamos a estratégia de go-to-market, implementamos inbound marketing com automação de funil, criamos conteúdo de valor para cada etapa da jornada do cliente e otimizamos todo o processo comercial com CRM integrado.',
+      stack: ['HubSpot', 'Salesforce', 'Google Analytics', 'WordPress', 'Mailchimp', 'LinkedIn Ads'],
+      results: [
+        { number: '+180%', label: 'Crescimento em 18 meses' },
+        { number: '3x', label: 'Geração de leads' },
+        { number: '-40%', label: 'Redução do CAC' }
+      ],
+      quote: 'A PronoiA não fez só um rebranding — ela redefiniu quem somos e para onde vamos. O crescimento foi imediato e sustentável.',
+      cite: '— Marcos Andrade, CEO da NovaTech'
+    },
+    {
+      tag: 'Transformação Digital',
+      title: 'Digitalização da HealthPlus',
+      subtitle: 'Modernização completa de uma rede de saúde com automação e portal do paciente',
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=400&fit=crop&auto=format&q=80',
+      challenge: 'A HealthPlus operava com processos manuais e sistemas fragmentados. Agendamentos eram feitos por telefone, prontuários em papel, e a experiência do paciente era deficiente. Custos operacionais estavam insustentáveis e a satisfação dos pacientes em queda.',
+      solution: 'Implementamos um prontuário eletrônico integrado, automação completa de agendamentos, portal do paciente com autoatendimento, integração com sistemas de saúde via API FHIR, e migramos toda a infraestrutura para a nuvem com arquitetura escalável.',
+      stack: ['Supabase', 'React', 'Node.js', 'FHIR API', 'Docker', 'AWS', 'Twilio'],
+      results: [
+        { number: '-60%', label: 'Redução de custos operacionais' },
+        { number: '95%', label: 'Satisfação dos pacientes' },
+        { number: '3x', label: 'Agendamentos online' }
+      ],
+      quote: 'A transformação digital que a PronoiA liderou mudou completamente nossa relação com os pacientes. Hoje somos referência em tecnologia na saúde.',
+      cite: '— Ricardo Lemos, CTO da HealthPlus'
+    },
+    {
+      tag: 'Marketing Digital',
+      title: 'Expansão do EducaBrasil',
+      subtitle: 'Estratégia de marketing digital e SEO que multiplicou o alcance orgânico',
+      image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=400&fit=crop&auto=format&q=80',
+      challenge: 'O Grupo EducaBrasil tinha um produto excelente, mas não conseguia escalar a captação de alunos. O tráfego orgânico era baixo, dependiam de mídia paga com ROI decrescente, e não tinham estratégia de conteúdo estruturada.',
+      solution: 'Desenvolvemos uma estratégia completa de SEO e marketing de conteúdo, criamos um blog com mais de 200 artigos otimizados, implementamos automação de email marketing com nurturing, e reestruturamos a arquitetura de informação do site para conversão.',
+      stack: ['Google Search Console', 'SEMrush', 'WordPress', 'RD Station', 'Hotjar', 'Google Tag Manager'],
+      results: [
+        { number: '+250%', label: 'Leads orgânicos' },
+        { number: '+400%', label: 'Tráfego orgânico' },
+        { number: '-55%', label: 'Custo por lead' }
+      ],
+      quote: 'Em 12 meses, saímos de uma operação dependente de mídia paga para um motor de crescimento orgânico que funciona 24/7.',
+      cite: '— Juliana Martins, Diretora do EducaBrasil'
+    },
+    {
+      tag: 'Processos & IA',
+      title: 'Otimização da GreenField',
+      subtitle: 'Automação inteligente de processos com IA que reduziu custos operacionais',
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop&auto=format&q=80',
+      challenge: 'A GreenField, empresa do setor agrícola, tinha processos manuais repetitivos que consumiam horas de trabalho da equipe. Relatórios eram gerados manualmente, análises de safra eram lentas, e a tomada de decisão era baseada em intuição, não em dados.',
+      solution: 'Implementamos automação de processos com IA, criamos pipelines de dados para análise preditiva de safra, desenvolvemos dashboards em tempo real para a liderança, e integramos sensores IoT com modelos de machine learning para otimização de recursos.',
+      stack: ['Python', 'TensorFlow', 'Power BI', 'Azure IoT', 'PostgreSQL', 'FastAPI', 'Docker'],
+      results: [
+        { number: '-45%', label: 'Tempo operacional' },
+        { number: '+30%', label: 'Produtividade' },
+        { number: '99.5%', label: 'Precisão dos relatórios' }
+      ],
+      quote: 'A automação com IA que a PronoiA implementou transformou nossa operação. Decisões que levavam dias agora tomam minutos.',
+      cite: '— Patricia Souza, COO da GreenField'
+    }
+  ];
+
+  const caseModal = get('caseModal');
+  const caseModalContent = get('caseModalContent');
+  const caseModalOverlay = get('caseModalOverlay');
+  const caseModalClose = get('caseModalClose');
+
+  const openCaseModal = (index) => {
+    const data = caseData[index];
+    if (!data || !caseModal) return;
+
+    get('caseModalImage').src = data.image;
+    get('caseModalImage').alt = data.title;
+    get('caseModalTag').textContent = data.tag;
+    get('caseModalTitle').textContent = data.title;
+    get('caseModalSubtitle').textContent = data.subtitle;
+    get('caseModalChallenge').textContent = data.challenge;
+    get('caseModalSolution').textContent = data.solution;
+
+    const stackContainer = get('caseModalStack');
+    if (stackContainer) {
+      stackContainer.innerHTML = '';
+      data.stack.forEach(tech => {
+        const span = document.createElement('span');
+        span.textContent = tech;
+        stackContainer.appendChild(span);
+      });
+    }
+
+    const resultsContainer = get('caseModalResults');
+    if (resultsContainer) {
+      resultsContainer.innerHTML = '';
+      data.results.forEach(result => {
+        const div = document.createElement('div');
+        div.className = 'case-modal__result';
+        div.innerHTML = `<span class="case-modal__result-number">${result.number}</span><span class="case-modal__result-label">${result.label}</span>`;
+        resultsContainer.appendChild(div);
+      });
+    }
+
+    get('caseModalQuote').textContent = `"${data.quote}"`;
+    get('caseModalCite').textContent = data.cite;
+
+    caseModal.classList.add('active');
+    caseModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    caseModalContent.scrollTop = 0;
+  };
+
+  const closeCaseModal = () => {
+    if (!caseModal) return;
+    caseModal.classList.remove('active');
+    caseModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  qsa('.case-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const index = parseInt(card.getAttribute('data-case'));
+      openCaseModal(index);
+    });
+  });
+
+  if (caseModalClose) caseModalClose.addEventListener('click', closeCaseModal);
+  if (caseModalOverlay) caseModalOverlay.addEventListener('click', closeCaseModal);
+
+  if (caseModal) {
+    caseModal.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeCaseModal();
+    });
+  }
+
+  const caseModalCta = get('caseModalCta');
+  if (caseModalCta) {
+    caseModalCta.addEventListener('click', () => {
+      closeCaseModal();
+    });
+  }
 });
